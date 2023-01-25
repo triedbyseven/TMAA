@@ -1,0 +1,41 @@
+{
+  "name": "twilio-mass-messaging",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^4.3.4",
+    "@tailwindui/react": "^0.1.1",
+    "autoprefixer": "^10.2.5",
+    "aws-amplify": "^5.0.11",
+    "aws-sdk": "^2.1301.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "10.0.9",
+    "papaparse": "^5.3.2",
+    "postcss": "^8.2.8",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.4",
+    "twilio": "^3.58.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@aws-sdk/types": "^3.257.0",
+    "@types/express": "^4.17.11",
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/node": "^14.14.35",
+    "@types/papaparse": "^5.3.7",
+    "@types/react": "^17.0.3",
+    "@types/twilio": "^2.11.0",
+    "@types/uuid": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.2.3"
+  }
+}
