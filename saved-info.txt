@@ -1,0 +1,28 @@
+JOY MD API KEY MAIN
+SID: SK57a4f69e88f0380a4559f975a12005d0
+
+JOY MD API KEY
+SID: SK3204cdbc5ccd2703c86eabd5c893b412
+
+Studio API Key
+SID: SK5c7e8d54722c197869ad873563d256c1
+
+autopilot_simulator_US53f0e2ad7ea7fdf2b341c682f400cb2a
+SID: SK8935a11b01bdd9265a2cb58b152a32ca
+
+Test Keys - UpWork
+SID: SKeecda22a9154eece8da7ea8d234e18c3
+
+
+--- NEW KEYS ---
+
+JOY MD API TWILIO API APP
+SKe9b9a1a21536eefaf6be5bbdefdb5825
+oyx6xA9A9raqAc2OG8zSXPywlTbcylqe
+
+
+joymd-master-user
+TriedBySeven0431!
+
+AKIAVYNGQFHCTBGUPK5L
+WLhKTUKf/9rdBB5aMx/gXYkOleWLqW5YzHZU1Kcy

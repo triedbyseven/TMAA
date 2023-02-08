@@ -78,7 +78,7 @@ const ListSimple: React.FC<ListSimple> = (props): React.ReactElement => {
         <div className="flex items-center">
           <div className="ml-4">
             <div className="text-sm font-medium text-gray-900">
-              {row.phoneNumberFormatted}
+              {row.phoneNumber}
             </div>
           </div>
         </div>

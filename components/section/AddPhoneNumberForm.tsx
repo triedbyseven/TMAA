@@ -10,7 +10,21 @@ interface AddPhoneNumberFormProps {
   toggleIsUploadingPhoneNumbers: () => void;
   isSubmitted: boolean;
   file: File | null;
-}
+};
+
+export const sanitizePhoneText = (text: string): string => {
+  const regex: RegExp = /[0-9]/g;
+
+  const newValue: string[] = text.split('');
+  const removeSpacesValue: string[] = newValue.filter(letter => letter.match(regex));
+  const joinedText: string = removeSpacesValue.join('');
+
+  if (joinedText.length >6) return `(${joinedText.substring(0, 3)})-${joinedText.substring(3, 6)}-${joinedText.substring(6, 10)}`;
+
+  if (joinedText.length > 3) return `(${joinedText.substring(0, 3)})-${joinedText.substring(3, 6)}`;
+
+  return joinedText.substring(0, 3);
+};
 
 const AddPhoneNumberForm: React.FC<AddPhoneNumberFormProps> = (props): React.ReactElement => {
   const { addPhoneNumber, isSubmitted } = props;
@@ -21,28 +35,9 @@ const AddPhoneNumberForm: React.FC<AddPhoneNumberFormProps> = (props): React.Rea
     const { target: { value } } = event;
     let phoneNumber: string = value;
 
-    const regex = new RegExp('^[0-9_ \(\)\-]*$');
-    if (!regex.test(phoneNumber)) return;
+    const formattedNumber = sanitizePhoneText(phoneNumber);
 
-    if (value.length > 14) return;
-
-    if (value.length === 4) {
-      var res = value.split("", 4);
-      res = ["(", res[0], res[1], res[2], ")", " ", res[3] ]
-      console.log(res.join(''));
-      phoneNumber = res.join('');
-    }
-    
-    if (value.length === 6) {
-      phoneNumber = phoneNumber.slice(1);
-      phoneNumber = phoneNumber.slice(0, -1);
-      phoneNumber = phoneNumber.slice(0, -1);
-    }
-
-    if (value.length === 9 || phoneNumber.length === 9) phoneNumber = phoneNumber + "-";
-    if (value.length === 10) phoneNumber = phoneNumber.slice(0, -1);  
-
-    setPhoneNumber(phoneNumber);
+    setPhoneNumber(formattedNumber);
   };
 
   const handleOnSubmit = (): void => {
@@ -51,10 +46,10 @@ const AddPhoneNumberForm: React.FC<AddPhoneNumberFormProps> = (props): React.Rea
   };
 
   const handleOnKeyDown = (e: any): void => {
-    console.log(e.keyCode);
-    if (e.keyCode === 16 || e.keyCode === 17 || e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40 || e.keyCode === 65) {
-      e.preventDefault();
-    }
+    // console.log(e.keyCode);
+    // if (e.keyCode === 16 || e.keyCode === 17 || e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40 || e.keyCode === 65) {
+    //   e.preventDefault();
+    // }
   };
 
   const handleOnPaste = (e: any): void => {

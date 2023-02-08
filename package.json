@@ -1,7 +1,10 @@
 {
   "name": "twilio-mass-messaging",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
+  "engines": {
+    "node": "16.15.0"
+  },
   "scripts": {
     "dev": "nodemon server.js",
     "build": "next build",
@@ -9,6 +12,7 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^4.3.4",
+    "@sendgrid/mail": "^7.7.0",
     "@tailwindui/react": "^0.1.1",
     "autoprefixer": "^10.2.5",
     "aws-amplify": "^5.0.11",
@@ -17,6 +21,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "isomorphic-fetch": "^3.0.0",
+    "lottie-react": "^2.3.1",
     "next": "10.0.9",
     "papaparse": "^5.3.2",
     "postcss": "^8.2.8",
@@ -24,7 +29,7 @@
     "react-dom": "17.0.1",
     "tailwindcss": "^2.0.4",
     "twilio": "^3.58.0",
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@aws-sdk/types": "^3.257.0",
